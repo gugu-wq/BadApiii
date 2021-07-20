@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		CE240A39269C948D0005E463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE240A38269C948D0005E463 /* AppDelegate.swift */; };
 		CE240A3B269C948D0005E463 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE240A3A269C948D0005E463 /* SceneDelegate.swift */; };
-		CE240A3D269C948D0005E463 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE240A3C269C948D0005E463 /* ViewController.swift */; };
 		CE240A40269C948D0005E463 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE240A3E269C948D0005E463 /* Main.storyboard */; };
 		CE240A42269C948E0005E463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE240A41269C948E0005E463 /* Assets.xcassets */; };
 		CE240A45269C948E0005E463 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE240A43269C948E0005E463 /* LaunchScreen.storyboard */; };
 		CE240A50269C948E0005E463 /* BadApiiiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE240A4F269C948E0005E463 /* BadApiiiTests.swift */; };
 		CE240A5B269C948E0005E463 /* BadApiiiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE240A5A269C948E0005E463 /* BadApiiiUITests.swift */; };
+		CE240A6B269CA1C20005E463 /* CharacterListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE240A6A269CA1C20005E463 /* CharacterListScreen.swift */; };
+		CE240A6D269CA5CA0005E463 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE240A6C269CA5CA0005E463 /* CharacterCell.swift */; };
+		CE240A6F269CA7A90005E463 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE240A6E269CA7A90005E463 /* Character.swift */; };
+		CE240A71269CAD4A0005E463 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE240A70269CAD4A0005E463 /* CharacterViewController.swift */; };
+		CE240A73269CB10D0005E463 /* CharacterStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE240A72269CB10D0005E463 /* CharacterStats.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,6 @@
 		CE240A35269C948D0005E463 /* BadApiii.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadApiii.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE240A38269C948D0005E463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE240A3A269C948D0005E463 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE240A3C269C948D0005E463 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE240A3F269C948D0005E463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE240A41269C948E0005E463 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE240A44269C948E0005E463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,11 @@
 		CE240A56269C948E0005E463 /* BadApiiiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BadApiiiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE240A5A269C948E0005E463 /* BadApiiiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadApiiiUITests.swift; sourceTree = "<group>"; };
 		CE240A5C269C948E0005E463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE240A6A269CA1C20005E463 /* CharacterListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListScreen.swift; sourceTree = "<group>"; };
+		CE240A6C269CA5CA0005E463 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		CE240A6E269CA7A90005E463 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		CE240A70269CAD4A0005E463 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
+		CE240A72269CB10D0005E463 /* CharacterStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterStats.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +109,15 @@
 			children = (
 				CE240A38269C948D0005E463 /* AppDelegate.swift */,
 				CE240A3A269C948D0005E463 /* SceneDelegate.swift */,
-				CE240A3C269C948D0005E463 /* ViewController.swift */,
+				CE240A6A269CA1C20005E463 /* CharacterListScreen.swift */,
+				CE240A6C269CA5CA0005E463 /* CharacterCell.swift */,
+				CE240A6E269CA7A90005E463 /* Character.swift */,
 				CE240A3E269C948D0005E463 /* Main.storyboard */,
 				CE240A41269C948E0005E463 /* Assets.xcassets */,
 				CE240A43269C948E0005E463 /* LaunchScreen.storyboard */,
 				CE240A46269C948E0005E463 /* Info.plist */,
+				CE240A70269CAD4A0005E463 /* CharacterViewController.swift */,
+				CE240A72269CB10D0005E463 /* CharacterStats.swift */,
 			);
 			path = BadApiii;
 			sourceTree = "<group>";
@@ -258,9 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE240A3D269C948D0005E463 /* ViewController.swift in Sources */,
+				CE240A71269CAD4A0005E463 /* CharacterViewController.swift in Sources */,
 				CE240A39269C948D0005E463 /* AppDelegate.swift in Sources */,
+				CE240A6B269CA1C20005E463 /* CharacterListScreen.swift in Sources */,
+				CE240A6F269CA7A90005E463 /* Character.swift in Sources */,
 				CE240A3B269C948D0005E463 /* SceneDelegate.swift in Sources */,
+				CE240A6D269CA5CA0005E463 /* CharacterCell.swift in Sources */,
+				CE240A73269CB10D0005E463 /* CharacterStats.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
