@@ -16,10 +16,12 @@ class CharacterCell: UITableViewCell {
     
     func setCharacter(character: CharacterStats) {
         
-        let data = NSData(contentsOf: NSURL(string: "https://www.breakingbadapi.com/api/img")! as URL)
-        characterImageView.image = UIImage(data: data! as Data)
+        //let data = NSData(contentsOf: NSURL(string: "https://www.breakingbadapi.com/api/img")! as URL)
+        //characterImageView.image = UIImage(data: data! as Data)
         
         characterTitleLabel.text = character.name
+        characterImageView.layer.cornerRadius = characterImageView.frame.size.width/2
+        //characterImageView.clipsToBounds = true
     }
     
 }

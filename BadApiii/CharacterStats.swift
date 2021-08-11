@@ -14,7 +14,6 @@ struct CharacterStats: Decodable {
     let nickname: String
     let portrayed: String
     let img: String
-    
     let occupation: [String]
     let appearance: [Int]
     let birthday: String

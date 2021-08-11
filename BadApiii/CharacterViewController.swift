@@ -7,9 +7,8 @@
 
 import UIKit
 
-extension UIImageView
-{
-    func fetchUIImage(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
+extension UIImageView {
+    func fetchUIImage(from url: URL, contentMode mode: ContentMode = .scaleToFill) {
         contentMode = mode
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
@@ -24,7 +23,7 @@ extension UIImageView
         }.resume()
     }
     
-    func imageDownload(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
+    func imageDownload(from link: String, contentMode mode: ContentMode = .scaleToFill) {
         guard let url = URL(string: link) else { return }
         fetchUIImage(from: url, contentMode: mode)
     }
@@ -57,21 +56,39 @@ class CharacterViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        nameLbl.text = character?.name
-        nicknameLbl.text = character?.nickname
-        statusLbl.text = character?.status
-        portrayedLbl.text = character?.portrayed
         
         let charactorOcc: [String] = (character?.occupation)!
-                let charactorAppearances: [Int] = (character?.appearance)!
-                let stringCharactorAppearances = charactorAppearances.map { String($0) }
-        appearanceLbl.text = " Seasons \(stringCharactorAppearances.joined(separator: ", "))"
-        occupationLbl.text = charactorOcc.joined(separator: ", ")
+        let charactorAppearances: [Int] = (character?.appearance)!
+        let stringCharactorAppearances = charactorAppearances.map { String($0) }
+        
+        nameLbl.text = character?.name
         birthLbl.text = character?.birthday
+        nicknameLbl.text = character?.nickname
+        occupationLbl.text = charactorOcc.joined(separator: ", ")
+        statusLbl.text = character?.status
+        let livingStatus = character?.status
+        switch livingStatus {
+        
+            case "Alive":
+                statusLbl.textColor = .systemBlue
+                
+            case "Deceased":
+                statusLbl.textColor = .red
+                
+            case "Presumed dead":
+                statusLbl.textColor = .orange
+                
+            default:
+                return
+        }
+        appearanceLbl.text = "Season \(stringCharactorAppearances.joined(separator: ", "))"
+        categoryLbl.text = character?.category
+        portrayedLbl.text = character?.portrayed
         
         let urlString = (character?.img)!
-        let url = URL(string: urlString)
         
         imageView.imageDownload(from: urlString)
+        imageView.layer.cornerRadius = imageView.frame.size.width/2
+        imageView.clipsToBounds = true
     }
 }
